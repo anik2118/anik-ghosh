@@ -1,56 +1,55 @@
 
 import React from 'react';
 import ResearchCard from '@/components/ResearchCard';
+import CertificationCard from '@/components/CertificationCard';
 
 const Research = () => {
-  const publications = [
+  const papers = [
     {
-      title: "Cyber-Attack Detection with Dynamic Watermarking and Robust State Estimation in DC Microgrids",
-      journal: "IEEE Transaction of Smart Grid",
+      title: "A Novel Event-Based False Data Injection Detection Strategy for DC Microgrids",
+      journal: "IEEE Transactions on Smart Grid",
+      description: "Proposed a novel event-based false data injection detection strategy for DC microgrids.",
       status: "Under Review",
+    },
+    {
+      title: "Cybersecurity Analysis of DC Microgrids with Dynamic Watermarking",
+      conference: "IEEE Power & Energy Society General Meeting 2023",
+      description: "A comprehensive analysis of cybersecurity vulnerabilities in DC microgrids and countermeasures using dynamic watermarking techniques.",
+      status: "Published",
       link: "#"
     },
     {
-      title: "A Cost-Effective Real-Time Water Quality Monitoring System",
-      conference: "PEIEACON 2024 Organised by Faculty of Electrical and Electronics Engineering, RUET",
+      title: "Machine Learning Based Approach for Pain Prediction in MRSA Patients",
+      journal: "Journal of Medical Systems",
+      description: "Development of a machine learning framework to predict pain levels in MRSA patients based on vital signs and environmental factors.",
+      status: "Published",
       link: "#"
-    },
-    {
-      title: "A Smart Approach to Control a Two-Wheeled Self-Balancing Robot Using a PID Controller with Two Degree of Freedom",
-      conference: "ICMIME 2021 Organised by Faculty of Mechanical Engineering, RUET",
-      link: "#research-gate-link"
-    },
-    {
-      title: "The Categorization of Surface Irregularities Presents on the Hot-Rolled Steel Strip, Encompassing Six Distinct Types of Surface Anomalies, Achieved through the Implementation of Vision Transformer",
-      conference: "6th Industrial Engineering and Operations Management Bangladesh Conference, Dhaka, Bangladesh",
-      link: "#doi"
     }
   ];
-
-  const conferences = [
+  
+  const certifications = [
     {
-      title: "Conference presentation - IEEEPEACON",
-      date: "Sep 2024"
+      title: "TensorFlow Developer Certificate",
+      organization: "Google",
+      date: "May 2023",
+      description: "Certified in implementing machine learning models using TensorFlow"
     },
     {
-      title: "IoT training certification",
-      organization: "Bangabandhu Sheikh Mujib Hi-tech Park, Rajshahi (80% proficiency)",
-      date: "Sep 2022"
+      title: "IoT Foundation: Fundamentals",
+      organization: "IBM",
+      date: "March 2023",
+      description: "Fundamentals of IoT architecture, protocols, and implementation"
     },
     {
-      title: "Public Speaking: A Tactical Approach",
-      organization: "Lovable, Dhaka",
-      date: "Sep 2022"
+      title: "Cybersecurity Fundamentals",
+      organization: "IBM",
+      date: "January 2023",
+      description: "Fundamentals of network security, encryption, and threat detection"
     },
     {
-      title: "Conference presentation",
-      organization: "IEOM society",
-      date: "Dec 2023"
-    },
-    {
-      title: "Certification of voluntary program",
-      organization: "Energy Club",
-      date: "Jan 2022"
+      title: "Machine Learning with Python",
+      organization: "Coursera",
+      date: "October 2022"
     }
   ];
 
@@ -58,39 +57,39 @@ const Research = () => {
     <div className="section-padding">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Research & Publications</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">Research & Certifications</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            My academic research and publications in the fields of cybersecurity, 
-            IoT applications, and control systems.
+            My research focuses on cybersecurity for DC microgrids, IoT systems, and machine learning applications in healthcare.
           </p>
         </div>
         
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-6">Publications</h2>
+          <h2 className="text-2xl font-bold mb-6 text-portfolio-primary">Research Papers</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {publications.map((publication, index) => (
+            {papers.map((paper, index) => (
               <ResearchCard 
                 key={index}
-                title={publication.title}
-                journal={publication.journal}
-                conference={publication.conference}
-                status={publication.status}
-                link={publication.link}
+                title={paper.title}
+                journal={paper.journal}
+                conference={paper.conference}
+                description={paper.description}
+                status={paper.status}
+                link={paper.link}
               />
             ))}
           </div>
         </div>
         
         <div>
-          <h2 className="text-2xl font-bold mb-6">Conferences & Certifications</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {conferences.map((conference, index) => (
-              <ResearchCard 
+          <h2 className="text-2xl font-bold mb-6 text-portfolio-primary">Certifications</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {certifications.map((cert, index) => (
+              <CertificationCard 
                 key={index}
-                title={conference.title}
-                organization={conference.organization}
-                description=""
-                date={conference.date}
+                title={cert.title}
+                organization={cert.organization}
+                date={cert.date}
+                description={cert.description}
               />
             ))}
           </div>
