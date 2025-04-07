@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Briefcase, Book, Code, FileText, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import SkillBadge from '@/components/SkillBadge';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Index = () => {
   const programmingSkills = [
@@ -38,18 +39,24 @@ const Index = () => {
         <div className="container mx-auto max-w-5xl">
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="md:w-1/2">
-              <h1 className="text-4xl md:text-5xl font-bold text-portfolio-secondary mb-6">
+              <div className="flex justify-center md:justify-start mb-8">
+                <Avatar className="h-48 w-48 border-4 border-white shadow-lg">
+                  <AvatarImage src="/lovable-uploads/a8fa8b51-39b6-4500-b20a-876710bbe1cd.png" alt="Anik Ghosh" />
+                  <AvatarFallback>AG</AvatarFallback>
+                </Avatar>
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-portfolio-secondary mb-6 text-center md:text-left">
                 Anik Ghosh
               </h1>
-              <h2 className="text-xl md:text-2xl text-portfolio-primary font-medium mb-6">
+              <h2 className="text-xl md:text-2xl text-portfolio-primary font-medium mb-6 text-center md:text-left">
                 Mechatronics Engineer & IoT Researcher
               </h2>
-              <p className="text-gray-700 mb-8">
+              <p className="text-gray-700 mb-8 text-center md:text-left">
                 Engineering graduate specializing in IoT systems, cybersecurity for DC microgrids, 
                 and machine learning. Focusing on creating secure and innovative solutions in 
                 electrical and mechatronics engineering.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <Button asChild>
                   <Link to="/projects" className="flex items-center gap-2">
                     View Projects <ArrowRight size={16} />
@@ -59,7 +66,7 @@ const Index = () => {
                   <Link to="/contact">Contact Me</Link>
                 </Button>
               </div>
-              <div className="flex gap-4 mt-8">
+              <div className="flex gap-4 mt-8 justify-center md:justify-start">
                 <a 
                   href="https://github.com/anik2118" 
                   target="_blank" 

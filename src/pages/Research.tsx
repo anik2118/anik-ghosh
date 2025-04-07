@@ -2,6 +2,7 @@
 import React from 'react';
 import ResearchCard from '@/components/ResearchCard';
 import CertificationCard from '@/components/CertificationCard';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Research = () => {
   const papers = [
