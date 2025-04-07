@@ -62,7 +62,7 @@ const Experience = () => {
 
   const certifications = [
     {
-      title: "Conference presentation, IEEEPEACON",
+      title: "Certificate of conference presentation, IEEEPIEACON",
       organization: "IEEE",
       date: "Sep 2024"
     },
@@ -74,13 +74,18 @@ const Experience = () => {
     },
     {
       title: "Public Speaking: A Tactical Approach",
-      organization: "Lovable, Dhaka",
+      organization: "Udemy",
       date: "Sep 2022"
     },
     {
-      title: "Conference presentation",
+      title: "Certificate of conference presentation",
       organization: "IEOM society",
       date: "Dec 2023"
+    },
+    {
+      title: "Certification of voluntary program",
+      organization: "Energy of the Future",
+      date: "Jun 2022"
     }
   ];
 
