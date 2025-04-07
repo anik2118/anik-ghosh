@@ -1,7 +1,6 @@
 
 import React from 'react';
 import ResearchCard from '@/components/ResearchCard';
-import CertificationCard from '@/components/CertificationCard';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Research = () => {
@@ -27,44 +26,18 @@ const Research = () => {
       link: "#"
     }
   ];
-  
-  const certifications = [
-    {
-      title: "TensorFlow Developer Certificate",
-      organization: "Google",
-      date: "May 2023",
-      description: "Certified in implementing machine learning models using TensorFlow"
-    },
-    {
-      title: "IoT Foundation: Fundamentals",
-      organization: "IBM",
-      date: "March 2023",
-      description: "Fundamentals of IoT architecture, protocols, and implementation"
-    },
-    {
-      title: "Cybersecurity Fundamentals",
-      organization: "IBM",
-      date: "January 2023",
-      description: "Fundamentals of network security, encryption, and threat detection"
-    },
-    {
-      title: "Machine Learning with Python",
-      organization: "Coursera",
-      date: "October 2022"
-    }
-  ];
 
   return (
     <div className="section-padding">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Research & Certifications</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">Research & Publications</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             My research focuses on cybersecurity for DC microgrids, IoT systems, and machine learning applications in healthcare.
           </p>
         </div>
         
-        <div className="mb-16">
+        <div>
           <h2 className="text-2xl font-bold mb-6 text-portfolio-primary">Research Papers</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {papers.map((paper, index) => (
@@ -76,21 +49,6 @@ const Research = () => {
                 description={paper.description}
                 status={paper.status}
                 link={paper.link}
-              />
-            ))}
-          </div>
-        </div>
-        
-        <div>
-          <h2 className="text-2xl font-bold mb-6 text-portfolio-primary">Certifications</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {certifications.map((cert, index) => (
-              <CertificationCard 
-                key={index}
-                title={cert.title}
-                organization={cert.organization}
-                date={cert.date}
-                description={cert.description}
               />
             ))}
           </div>
