@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import Research from "./pages/Research";
 import Experience from "./pages/Experience";
+import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -29,6 +30,7 @@ const App = () => (
               <Route path="/projects" element={<Projects />} />
               <Route path="/research" element={<Research />} />
               <Route path="/experience" element={<Experience />} />
+              <Route path="/blog" element={<Blog />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
