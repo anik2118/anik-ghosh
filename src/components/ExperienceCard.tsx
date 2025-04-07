@@ -10,6 +10,7 @@ interface ExperienceCardProps {
   period: string;
   description: string[];
   supervisor?: string;
+  logo?: string;
 }
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({
@@ -18,14 +19,15 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   location,
   period,
   description,
-  supervisor
+  supervisor,
+  logo
 }) => {
   return (
     <div className="relative pl-8 pb-8 border-l border-gray-200 timeline-item">
       <Card className="border-l-4 border-l-portfolio-primary">
         <CardHeader>
           <div className="flex justify-between items-start">
-            <div>
+            <div className="flex-1">
               <CardTitle className="text-lg md:text-xl flex items-center gap-2">
                 <Briefcase size={18} className="text-portfolio-primary" />
                 {title}
@@ -37,7 +39,16 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
                 </CardDescription>
               )}
             </div>
-            <div className="text-right">
+            {logo && (
+              <div className="flex-shrink-0 mr-4">
+                <img 
+                  src={logo} 
+                  alt={`${company} logo`} 
+                  className="h-16 w-auto object-contain"
+                />
+              </div>
+            )}
+            <div className="text-right flex-shrink-0">
               <p className="text-xs text-gray-500">{location}</p>
               <p className="text-xs font-medium text-portfolio-primary">{period}</p>
             </div>

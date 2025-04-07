@@ -14,7 +14,8 @@ const Experience = () => {
       description: [
         "Developed and implemented cybersecurity strategies for DC microgrids, focusing on cyberattack detection, mitigation, and resilience to ensure secure and reliable power systems.",
         "Conducted research on secure state estimation and control techniques for DC microgrids, enhancing system observability, robustness, and defense against cyber threats."
-      ]
+      ],
+      logo: "/lovable-uploads/6c4c2b41-637d-4149-a045-8c425c55c954.png"
     },
     {
       title: "Undergrad Research Student",
@@ -27,7 +28,8 @@ const Experience = () => {
         "Conducted research and developed methods for assessing and enhancing the thermal comfort patients, integrating sensors and data analysis.",
         "Utilized machine learning algorithms to monitor and predict patient pain levels, enhancing patient care through advanced data insights.",
         "Designed and developed a web application for real-time patient monitoring, featuring user-friendly interfaces and seamless integration with IoT devices for continuous health tracking."
-      ]
+      ],
+      logo: "/lovable-uploads/ddbb43a4-7090-4bd8-9b50-a875110a6ef9.png"
     },
     {
       title: "Aspire Leadership Program",
@@ -36,7 +38,8 @@ const Experience = () => {
       period: "Aug 2024 - Nov 2024",
       description: [
         "Completed a three-month prestigious leadership development program designed and delivered by Harvard Business School faculty to cultivate emerging leaders."
-      ]
+      ],
+      logo: "/lovable-uploads/e56b4101-4aa1-4715-b663-a3b9df09e1fb.png"
     },
     {
       title: "Web Automation Engineer",
@@ -111,6 +114,7 @@ const Experience = () => {
                 period={experience.period}
                 description={experience.description}
                 supervisor={experience.supervisor}
+                logo={experience.logo}
               />
             ))}
           </div>
